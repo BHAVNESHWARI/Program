@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Gallery</title>
+  <style>
+    .product-gallery { display: flex; flex-wrap: wrap; gap: 20px; }
+    .product-item { border: 1px solid #ccc; padding: 20px; width: 200px; }
+    .pagination { margin-top: 20px; }
+    button { padding: 5px 10px; }
+  </style>
+</head>
+<body>
+  <h1>Product Gallery</h1>
+
+  <select id="categoryFilter">
+    <option value="">All Categories</option>
+    <option value="electronics">Electronics</option>
+    <option value="furniture">Furniture</option>
+    <option value="appliances">Appliances</option>
+  </select>
+
+  <select id="sortSelect">
+    <option value="price-asc">Price (Low to High)</option>
+    <option value="price-desc">Price (High to Low)</option>
+    <option value="name-asc">Name (A-Z)</option>
+    <option value="name-desc">Name (Z-A)</option>
+  </select>
+
+  <div class="product-gallery" id="productGallery"></div>
+
+  <div class="pagination">
+    <button id="prevPage" disabled>Previous</button>
+    <span id="pageNumber">Page 1</span>
+    <button id="nextPage">Next</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
